@@ -47,19 +47,22 @@ function SoHard (j) {
 SoHard (j)
 
 3*** Подумать и предусмотреть, какие случаи могут баговать предыдущую функцию и добавить проверки на невалидные вводы в таких случаях вывести в чем ошибка ввода:
-
-let j=55;
-function SoHard (j) {
-    if (typeof j != "number") {
-        console.log ('Используй только числа');
-    } else {
-        console.log ('Это число');
-    } if (j%5==0) {
+let w=55
+function W (w) {
+    if (typeof w != "number") {
+        console.log ('Необходимо использовать только числа и цифры');
+    } else if (w==0) {
+        console.log ('Значение "ноль" недопустимо');
+    } else if (w==Infinity) {
+        console.log ('Значение "бесконечность" недопустимо');
+    } else if (w==55) {
+        console.log ('Верное число');
+    } else if (w%5==0) {
         console.log ('Делится на 5');
-    } else if (j%11==0) {
+    } else if (w%11==0) {
         console.log ('Делится на 11');
     } else {
         console.log ('Скучное число');
     }
 }
-SoHard (j)
+W (w)
